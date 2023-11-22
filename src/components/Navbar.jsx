@@ -1,9 +1,10 @@
 import React from "react";
+import img1 from "../img/img1.jpeg";
 import { FiBell } from "react-icons/fi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { FiPlus } from "react-icons/fi";
 import profilepic from "../img/profilepic.jpg";
-
+import Menu from "./Menu";
 
 
 function Navbar() {
