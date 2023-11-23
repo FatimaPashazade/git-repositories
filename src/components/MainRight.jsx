@@ -1,75 +1,84 @@
-import React from 'react'
-import  {IoBulbOutline} from 'react-icons/io5';
-import {MdRssFeed } from 'react-icons/md';
-import img1 from "../img/img1.jpeg";
-import { Link } from 'react-router-dom';
+// MainLeft.jsx
 
+import React from "react";
+import { IoMdArrowDropdown } from "react-icons/io";
+import profilepic from "../img/profilepic.jpg";
+import lists from "../lists.json";
+import { Link } from "react-router-dom";
 
-function MainRight() {
-  return <div className="mainRight">
-      <div className="mainRightContainer">
-        <div className="mainRightText">
-          <h2>Following</h2>
-          <h2>For You</h2>
-        </div>
-        <div className="lineTwo"/>
-
-        <div className="box">
-          <h2> Welcome ... This is Github clone with React.js, React Router </h2>
-          <p>Check out my <span> portfolio </span>, <span> Medium account</span> and
-          <span> Instagram </span>
-          </p>
-          <button className='btn'>
-            <Link to ="/profile">Github clone</Link>
-          </button>
-        </div>
-        <div className="boxCenter">
-          <div className="boxCenterFirst">
-            <IoBulbOutline />
-            <p>
-              On my portfolio, I have a <span> React </span>, <span> Next.js </span> and <span>
-                Tailwind </span> HTML AND CSS projects.
-            </p>
-          </div>
-            <div className="boxCenterFirst">
-              <MdRssFeed />
-              <p>
-               Check out what is new! </p>
-            </div>
+/**
+ * Component: MainLeft
+ * Description: Renders the left section of the main view, displaying user information,
+ *              recent repositories, activities, and teams.
+ * @returns {JSX.Element} - JSX for the left section of the main view.
+ */
+function MainLeft() {
+  return (
+    <div className="mainLeftContainer">
+      <div className="mainLeft">
+        {/* User information */}
+        <div className="mainLeftName">
+          <img src={profilepic} alt="" />
+          <h2>Fatima Pashazade</h2>
+          <IoMdArrowDropdown />
         </div>
 
+        {/* Line */}
+        <div className="line" />
 
-         {/*Footer*/}
-         <div className="footer">
-          <div className="footerFirst">
-            <img src="{img1}" alt="" />
-            <h4>Github clone</h4>
+        {/* Recent Repositories */}
+        <div className="recentRepo">
+          <div className="recentRepos">
+            <h2> Recent Repositories </h2>
+            <button>New</button>
           </div>
-          <div className="footerSecond">
-            <div className="footerSecondInside">
-              <h4>Blog</h4>
-              <h4>About</h4>
-              <h4>Shop</h4>
-              <h4>Github clone</h4>
-              <h4>Pricing</h4>
-            </div>
 
-            <div className='footerSecondInside'>
-              <h4>API</h4>
-              <h4>Training</h4>
-              <h4>Status</h4>
-              <h4>Security</h4>
+          <div className="inputBox"></div>
+          <input type="text" placeholder="Find repositories..." />
+        </div>
+
+        {/* List of repositories */}
+        <div className="mainLeftLists">
+          {lists.map((item, idx) => (
+            <div className="item" key={idx}>
+              <img src={profilepic} alt="" />
+
+              <div>
+                <h2>{`${item.name} / ${item.repo}`}</h2>
+              </div>
             </div>
-            <div className="footerSecondInside">
-              <h4>Terms </h4>
-              <h4>Privacy</h4>
-              <h4>Docs</h4>
+          ))}
+          {/* Link to profile */}
+          <Link to="/profile">Show More</Link>
+        </div>
+
+        {/* Line */}
+        <div className="line" />
+
+        {/* Recent Activities */}
+        <div className="recentRepo">
+          <div className="recentRepos">
+            <h2>Recent Activities</h2>
           </div>
-         </div>
+          <p>New projects</p>
+        </div>
+
+        {/* Line */}
+        <div className="line" />
+
+        {/* User Teams */}
+        <div className="recentRepo">
+          <div className="recentRepos">
+            <h2>Your teams</h2>
+          </div>
+
+          <div className="inputBoxTwo">
+            <input type="text" placeholder="Find a team..." />
+          </div>
+        </div>
       </div>
-      <div className="lineTwo"/>
     </div>
-  </div>
+  );
 }
 
-export default MainRight;
+export default MainLeft;
