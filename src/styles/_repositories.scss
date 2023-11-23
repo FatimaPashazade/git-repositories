@@ -1,63 +1,110 @@
 .repositories-tab {
-    font-family: 'Arial', sans-serif;
-    width: 800px;
-    margin: 0 auto;
+  font-family: "Arial", sans-serif;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.repositories-title {
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 30px;
+  margin-bottom: 16px;
+
+  input {
+    width: 260px;
+    height: 34px;
+    background-color: var(--input-color);
+    margin-left: 10px;
+    font-size: 14px;
+    padding-left: 10px;
+    font-weight: bold;
+    border: 1px solid var(--line-color);
+    border-radius: 4px;
+    color: white;
   }
-  
-  .repositories-title {
-    border-bottom: 1px solid #e1e4e8;
-    padding-bottom: 8px;
-    margin-bottom: 16px;
-  }
-  
-  .repositories-title h2 {
-    font-size: 24px;
-    margin-bottom: 0;
-  }
-  
-  .repositories-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .repository-box {
-    border: 1px solid #e1e4e8;
-    border-radius: 6px;
-    margin: 0 16px 16px 0;
+  input:focus {
     width: 400px;
+    transition: width ease-out 0.3s;
   }
-  
-  .repository-top {
-    padding: 16px;
-  }
-  
-  .repository-top h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-  }
-  
-  .repository-description {
-    color: #586069;
-    font-size: 14px;
-  }
-  
-  .repository-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-    background-color: #f6f8fa;
-    border-top: 1px solid #e1e4e8;
-    border-radius: 0 0 6px 6px;
-  }
-  
-  .repository-language span {
-    color: #586069;
-    font-size: 14px;
-  }
-  
-  .repository-stats span {
-    color: #586069;
-    font-size: 14px;
-  }
-  
+}
+
+.repositories-title h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.custom-dropdown {
+  width: 260px;
+  height: 34px;
+  background-color: var(--input-color);
+  margin-left: 10px;
+  font-size: 14px;
+  padding-left: 10px;
+  font-weight: bold;
+  border: 1px solid var(--line-color);
+  border-radius: 4px;
+  color: white;
+}
+
+/* Style the dropdown arrow */
+.custom-dropdown::after {
+  content: "\25BC"; /* Unicode for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Style on hover/focus */
+.custom-dropdown:hover,
+.custom-dropdown:focus {
+  border-color: #999;
+}
+
+h3 a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+h3 a:hover {
+  color: #eef1f3;
+}
+
+.repository-description {
+  color: #666666;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.repository-language span {
+  color: #eee6e6;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.repository-stats span {
+  margin-right: 10px;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.repositories-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.repository-box {
+  padding: 20px;
+  border-radius: 5px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+}
+.repository-box:last-child {
+  border-bottom: none;
+}

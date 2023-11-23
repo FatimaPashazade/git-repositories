@@ -1,4 +1,4 @@
-.left{
+.left {
   width: 310px;
 
   .image {
@@ -7,18 +7,18 @@
     position: relative;
     margin: 4px auto;
 
-    img{
+    img {
       width: 100%;
       object-fit: contain;
       border-radius: 50%;
     }
   }
 
-  .emoticonBox{
+  .emoticonBox {
     height: 38px;
     width: 38px;
     position: absolute;
-    top:150px;
+    top: 150px;
     right: 0px;
     background-color: black;
     border-radius: 50%;
@@ -28,33 +28,48 @@
     align-items: center;
     color: white;
 
-    .emoticon{
+    .emoticon {
       width: 20px;
       height: 20px;
     }
   }
 
-  .leftDetails{
+  .leftDetails {
     height: 200px;
     width: 100%;
     color: white;
 
-    h2{
+    h2 {
       font-size: 26px;
-      margin:24px 0px;
+      margin: 24px 0px;
     }
 
-    button{
-        font-size: 14px;
-        font-weight: bold;
-        padding: 8px;
-        width: 100%;
-        border-radius: 8px;
-        border: none;
-        background-color:green ;
-        border: 1px solid var(--border-color);
-        color:white;
-        cursor: pointer;
-      }
+    button {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 8px;
+      width: 100%;
+      border-radius: 8px;
+      border: none;
+      background-color: green;
+      border: 1px solid var(--border-color);
+      color: white;
+      cursor: pointer;
+    }
+  }
+  .followers {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .followers h2 {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .followers h2 .follower,
+  .followers h2 .following {
+    margin-right: 10px;
   }
 }

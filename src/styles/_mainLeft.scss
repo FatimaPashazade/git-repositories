@@ -73,38 +73,38 @@
       }
     }
 
-    .recentRepo{
+    .recentRepo {
       width: 100%;
       margin: 24px auto 8px;
 
-      .inputBox{
-        padding: 2px ;
+      .inputBox {
+        padding: 2px;
       }
-      .recentRepos{
-       display: flex;
-       align-items: center;
-      justify-content: space-between;
+      .recentRepos {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-      h2{
-        font-size: 14px;
-        color: var(--grey-color);
+        h2 {
+          font-size: 14px;
+          color: var(--grey-color);
+        }
+        button {
+          cursor: pointer;
+          width: 64px;
+          height: 28px;
+          border: none;
+          background-color: green;
+          color: white;
+          font-size: 14px;
+          font-weight: bold;
+          border-radius: 6px;
+        }
+        button:hover {
+          background-color: greenyellow;
+        }
       }
-      button{
-        cursor: pointer;
-        width: 64px;
-        height: 28px;
-        border: none;
-        background-color:green ;
-        color:white;
-        font-size: 14px;
-        font-weight: bold;
-        border-radius: 6px;
-      }
-      button:hover{
-        background-color: greenyellow;
-      }
-    }
-      input{
+      input {
         width: 100%;
         margin: 10px auto;
         height: 34px;
@@ -116,15 +116,15 @@
         border-radius: 4px;
       }
 
-    .inputBoxTwo{
-      margin-bottom: 80px;
-      padding: 2px;
-    }
+      .inputBoxTwo {
+        margin-bottom: 80px;
+        padding: 2px;
+      }
 
-    p{
-      margin: 12px auto;
-      color: var(--grey-two-color);
-      font-size: 12px;
+      p {
+        margin: 12px auto;
+        color: var(--grey-two-color);
+        font-size: 12px;
       }
     }
   }
