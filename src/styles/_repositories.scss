@@ -44,16 +44,21 @@
   border: 1px solid var(--line-color);
   border-radius: 4px;
   color: white;
+  position: relative;
 }
 
 /* Style the dropdown arrow */
 .custom-dropdown::after {
   content: "\25BC"; /* Unicode for down arrow */
+
+  pointer-events: none;
   position: absolute;
-  top: 50%;
+  top: calc(50% - 5px); /* Adjust the positioning as needed */
   right: 10px;
   transform: translateY(-50%);
   pointer-events: none;
+
+
 }
 
 /* Style on hover/focus */
