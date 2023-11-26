@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 /**
- * Component: RepositoriesTab
+ * Component: Repositories
  * Description: Renders a tab displaying user repositories with search and filter options.
  * @param {array} userRepos - Array of user repositories.
  * @returns {JSX.Element} - JSX for the repositories tab.
@@ -67,7 +67,6 @@ function RepositoriesTab({ userRepos }) {
               <div className="repository-language">
                 <span>{repo.language}</span>
               </div>
-              {/* Additional repository details can be added here */}
             </div>
           </div>
         ))}
