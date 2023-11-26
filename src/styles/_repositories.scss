@@ -21,6 +21,7 @@
     border-radius: 4px;
     color: white;
   }
+
   input:focus {
     width: 400px;
     transition: width ease-out 0.3s;
@@ -49,11 +50,13 @@
 
 /* Style the dropdown arrow */
 .custom-dropdown::after {
-  content: "\25BC"; /* Unicode for down arrow */
+  content: "\25BC";
+  /* Unicode for down arrow */
 
   pointer-events: none;
   position: absolute;
-  top: calc(50% - 5px); /* Adjust the positioning as needed */
+  top: calc(50% - 5px);
+  /* Adjust the positioning as needed */
   right: 10px;
   transform: translateY(-50%);
   pointer-events: none;
@@ -110,6 +113,7 @@ h3 a:hover {
   padding-bottom: 30px;
   margin-bottom: 50px;
 }
+
 .repository-box:last-child {
   border-bottom: none;
 }

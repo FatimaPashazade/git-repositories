@@ -1,7 +1,7 @@
 @import "./main";
 
 
-.menu{
+.menu {
   background-color: var(-btn-color);
   position: absolute;
   top: 44px;
@@ -18,37 +18,38 @@
     align-items: center;
   }
 
-  p{
+  p {
     cursor: pointer;
     width: 100%;
     padding: 6px 16px;
 
-    a{
+    a {
       text-decoration: none;
       color: white;
     }
 
-    &:last-child{
+    &:last-child {
       margin-bottom: 8px;
       padding: 6px 16px 6px;
     }
 
-    &:hover{
-      background-color: rgb(0,136, 255);
+    &:hover {
+      background-color: rgb(0, 136, 255);
     }
   }
 
-  .lineThree{
+  .lineThree {
     @include lines();
     margin: 8px 0
   }
-.menuStatus{
-  input{
-    background-color: transparent;
-    border: 1px solid var(--line-color);
-    border-radius: 4px;
-    padding: 8px
+
+  .menuStatus {
+    input {
+      background-color: transparent;
+      border: 1px solid var(--line-color);
+      border-radius: 4px;
+      padding: 8px
+    }
   }
-}
 
 }
